@@ -12,13 +12,12 @@ before_script: python setup.py testdep
 script:
   - python setup.py test
 env:
+  - DJANGO=1.6.11
+  - DJANGO=1.7.7
+  - DJANGO=1.8
   global:
     - secure: hA7wC+KJRcefKIv27dyeefeWjZvhrkx/YJmWiMkw28sCKH0gs/fFnS06M+EODs4Pb72J7S+Mr5a4kJy06EFXKwWHwg0qlErW314kNzC/w9ZOXayIw+YtxYKfip4g/wXUmvOudqC+JpNyenPEIcQmO8hanLlk+Ri1GyIO9GrT8To=
     - secure: OmMpeD38Y2EIAIm4t/zpifqdYlVhDn2GOcHyJPnBsBCibifirokTTjPHThikH+QWYzMrxGrEctbL86f3QmY51BRG+4/cENzMj2GChLENnKrF607/sx7PxqeSjMJWeRd9vu9tbtUdi1dLEFLcoNw4ybqfc4AsF/YeIu2zH0LVNkU=
-  matrix:
-    - DJANGO=1.6.11
-    - DJANGO=1.7.7
-    - DJANGO=1.8
 matrix:
   exclude:
     - python: 3.2
